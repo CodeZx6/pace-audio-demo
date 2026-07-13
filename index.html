@@ -20,7 +20,7 @@
             <span class="link-block"><a class="external-link button is-dark is-rounded is-small" href="#" aria-disabled="true">&#128196;&nbsp;Paper (soon)</a></span>
             <span class="link-block"><a class="external-link button is-dark is-rounded is-small" href="#" aria-disabled="true">&#128187;&nbsp;Code (soon)</a></span>
             <span class="link-block"><a class="external-link button is-dark is-rounded is-small" href="#" aria-disabled="true">&#128451;&nbsp;LSM &amp; ESM benchmarks (soon)</a></span>
-            <span class="link-block"><a class="external-link button is-primary is-rounded is-small" href="#samples">&#128266;&nbsp;Listening examples</a></span>
+            <span class="link-block"><a class="external-link button is-primary is-rounded is-small" href="#humanoid">&#128266;&nbsp;Robot listening demo</a></span>
           </div>
         </div>
       </div>
@@ -67,153 +67,68 @@
   </div>
 </section>
 
-<section class="section pt-2" id="samples">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3">Listening examples</h2>
-    <p class="content">Fifteen utterances, three per benchmark. Each card plays the noisy input, the frozen backbone at its default NFE, the same backbone with +PACE at a reduced NFE, and the clean reference. Examples are selected where +PACE improves both PESQ against the clean reference and non intrusive perceptual scores (UTMOS, DNSMOS OVRL) over the backbone. Starting a clip pauses the others. Clips are 16 kHz mono.</p>
-    <div class="benchgroup"><h3 class="title is-4">VoiceBank-DEMAND <span class="benchtag">In domain</span></h3>
-<p class="benchdesc">The corpus every backbone was trained on.</p><div class="samplecard"><div class="samplemeta"><span class="fname">p257_196.wav</span><span class="pairinfo">FlowSE at 5 steps &rarr; +PACE at 4 steps</span></div>
-<blockquote class="transcript">The album was widely expected to be a commercial disaster.</blockquote>
-<div class="vgrid"><div class="variant"><div class="vhead"><span class="vlabel">Noisy input</span><span class="chips"><span class='mchip'>PESQ 2.25</span></span></div>
-<audio controls preload="none" src="audio/vbd1_noisy.wav"></audio></div><div class="variant"><div class="vhead"><span class="vlabel">FlowSE backbone &middot; N = 5</span><span class="chips"><span class='mchip'>PESQ 2.31</span><span class='mchip'>UTMOS 3.67</span><span class='mchip'>DNSMOS 3.14</span></span></div>
-<audio controls preload="none" src="audio/vbd1_backbone.wav"></audio></div><div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 4</span><span class="chips"><span class='mchip'>PESQ 3.87</span><span class='mchip'>UTMOS 3.74</span><span class='mchip'>DNSMOS 3.23</span></span></div>
-<audio controls preload="none" src="audio/vbd1_pace.wav"></audio></div><div class="variant v-clean"><div class="vhead"><span class="vlabel">Clean reference</span><span class="chips"></span></div>
-<audio controls preload="none" src="audio/vbd1_clean.wav"></audio></div></div></div><div class="samplecard"><div class="samplemeta"><span class="fname">p232_369.wav</span><span class="pairinfo">SB at 50 steps &rarr; +PACE at 6 steps</span></div>
-<blockquote class="transcript">To do so, he reckons that a good opening result is essential.</blockquote>
-<div class="vgrid"><div class="variant"><div class="vhead"><span class="vlabel">Noisy input</span><span class="chips"><span class='mchip'>PESQ 1.32</span></span></div>
-<audio controls preload="none" src="audio/vbd2_noisy.wav"></audio></div><div class="variant"><div class="vhead"><span class="vlabel">SB backbone &middot; N = 50</span><span class="chips"><span class='mchip'>PESQ 2.94</span><span class='mchip'>UTMOS 3.68</span><span class='mchip'>DNSMOS 2.93</span></span></div>
-<audio controls preload="none" src="audio/vbd2_backbone.wav"></audio></div><div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 6</span><span class="chips"><span class='mchip'>PESQ 3.20</span><span class='mchip'>UTMOS 4.00</span><span class='mchip'>DNSMOS 3.16</span></span></div>
-<audio controls preload="none" src="audio/vbd2_pace.wav"></audio></div><div class="variant v-clean"><div class="vhead"><span class="vlabel">Clean reference</span><span class="chips"></span></div>
-<audio controls preload="none" src="audio/vbd2_clean.wav"></audio></div></div></div><div class="samplecard"><div class="samplemeta"><span class="fname">p257_319.wav</span><span class="pairinfo">SGMSE+ at 30 steps &rarr; +PACE at 20 steps</span></div>
-<blockquote class="transcript">You can see it on the training ground and around the hotel.</blockquote>
-<div class="vgrid"><div class="variant"><div class="vhead"><span class="vlabel">Noisy input</span><span class="chips"><span class='mchip'>PESQ 1.24</span></span></div>
-<audio controls preload="none" src="audio/vbd3_noisy.wav"></audio></div><div class="variant"><div class="vhead"><span class="vlabel">SGMSE+ backbone &middot; N = 30</span><span class="chips"><span class='mchip'>PESQ 1.53</span><span class='mchip'>UTMOS 3.89</span><span class='mchip'>DNSMOS 3.45</span></span></div>
-<audio controls preload="none" src="audio/vbd3_backbone.wav"></audio></div><div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 20</span><span class="chips"><span class='mchip'>PESQ 3.19</span><span class='mchip'>UTMOS 4.12</span><span class='mchip'>DNSMOS 3.36</span></span></div>
-<audio controls preload="none" src="audio/vbd3_pace.wav"></audio></div><div class="variant v-clean"><div class="vhead"><span class="vlabel">Clean reference</span><span class="chips"></span></div>
-<audio controls preload="none" src="audio/vbd3_clean.wav"></audio></div></div></div></div><div class="benchgroup"><h3 class="title is-4">DNS no-reverb <span class="benchtag">Within-family noise shift</span></h3>
-<p class="benchdesc">Unseen recordings, familiar noise types.</p><div class="samplecard"><div class="samplemeta"><span class="fname">clnsp250_vacuum_388017_2_snr6_tl-20_fileid_231.wav</span><span class="pairinfo">SGMSE+ at 30 steps &rarr; +PACE at 15 steps</span></div>
-<blockquote class="transcript">in the audience and make guilty faces? He may try to phone us. Here&#x27;s where luck would  normally step in. Within this framework, what followed was strained. Even macabre.</blockquote>
-<div class="vgrid"><div class="variant"><div class="vhead"><span class="vlabel">Noisy input</span><span class="chips"><span class='mchip'>PESQ 1.27</span></span></div>
-<audio controls preload="none" src="audio/dns1_noisy.wav"></audio></div><div class="variant"><div class="vhead"><span class="vlabel">SGMSE+ backbone &middot; N = 30</span><span class="chips"><span class='mchip'>PESQ 2.20</span><span class='mchip'>UTMOS 3.66</span><span class='mchip'>DNSMOS 3.41</span></span></div>
-<audio controls preload="none" src="audio/dns1_backbone.wav"></audio></div><div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 15</span><span class="chips"><span class='mchip'>PESQ 2.76</span><span class='mchip'>UTMOS 4.07</span><span class='mchip'>DNSMOS 3.37</span></span></div>
-<audio controls preload="none" src="audio/dns1_pace.wav"></audio></div><div class="variant v-clean"><div class="vhead"><span class="vlabel">Clean reference</span><span class="chips"></span></div>
-<audio controls preload="none" src="audio/dns1_clean.wav"></audio></div></div></div><div class="samplecard"><div class="samplemeta"><span class="fname">clnsp91_washer_400403_3_snr11_tl-30_fileid_228.wav</span><span class="pairinfo">SGMSE+ at 30 steps &rarr; +PACE at 15 steps</span></div>
-<blockquote class="transcript">The National Historical Survey found seismic activity.  Corey attacked the project with extra determination.  You always come up with pathological examples.  Put the butcher block table in the garage.</blockquote>
-<div class="vgrid"><div class="variant"><div class="vhead"><span class="vlabel">Noisy input</span><span class="chips"><span class='mchip'>PESQ 2.16</span></span></div>
-<audio controls preload="none" src="audio/dns2_noisy.wav"></audio></div><div class="variant"><div class="vhead"><span class="vlabel">SGMSE+ backbone &middot; N = 30</span><span class="chips"><span class='mchip'>PESQ 2.30</span><span class='mchip'>UTMOS 4.05</span><span class='mchip'>DNSMOS 3.37</span></span></div>
-<audio controls preload="none" src="audio/dns2_backbone.wav"></audio></div><div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 15</span><span class="chips"><span class='mchip'>PESQ 2.68</span><span class='mchip'>UTMOS 4.26</span><span class='mchip'>DNSMOS 3.46</span></span></div>
-<audio controls preload="none" src="audio/dns2_pace.wav"></audio></div><div class="variant v-clean"><div class="vhead"><span class="vlabel">Clean reference</span><span class="chips"></span></div>
-<audio controls preload="none" src="audio/dns2_clean.wav"></audio></div></div></div><div class="samplecard"><div class="samplemeta"><span class="fname">clnsp176_chair_154380_0_snr19_tl-32_fileid_35.wav</span><span class="pairinfo">StoRM at 30 steps &rarr; +PACE at 20 steps</span></div>
-<blockquote class="transcript">had a tiny envelope tied to its wrist.  Diversity of perception, yes.  Diversity of fact, yes.  To some extent, predispositions.</blockquote>
-<div class="vgrid"><div class="variant"><div class="vhead"><span class="vlabel">Noisy input</span><span class="chips"><span class='mchip'>PESQ 2.15</span></span></div>
-<audio controls preload="none" src="audio/dns3_noisy.wav"></audio></div><div class="variant"><div class="vhead"><span class="vlabel">StoRM backbone &middot; N = 30</span><span class="chips"><span class='mchip'>PESQ 2.36</span><span class='mchip'>UTMOS 3.86</span><span class='mchip'>DNSMOS 3.34</span></span></div>
-<audio controls preload="none" src="audio/dns3_backbone.wav"></audio></div><div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 20</span><span class="chips"><span class='mchip'>PESQ 2.59</span><span class='mchip'>UTMOS 3.96</span><span class='mchip'>DNSMOS 3.33</span></span></div>
-<audio controls preload="none" src="audio/dns3_pace.wav"></audio></div><div class="variant v-clean"><div class="vhead"><span class="vlabel">Clean reference</span><span class="chips"></span></div>
-<audio controls preload="none" src="audio/dns3_clean.wav"></audio></div></div></div></div><div class="benchgroup"><h3 class="title is-4">LSM (LibriSpeech + MUSAN) <span class="benchtag">Out-of-family noise shift</span></h3>
-<p class="benchdesc">Noise classes the training corpus never contained.</p><div class="samplecard"><div class="samplemeta"><span class="fname">lsm_0088_snr2.5.wav</span><span class="pairinfo">SGMSE+ at 30 steps &rarr; +PACE at 12 steps</span></div>
-<blockquote class="transcript">Thus, it is that the honor of three is saved, our country, our masters, and our own.</blockquote>
-<div class="vgrid"><div class="variant"><div class="vhead"><span class="vlabel">Noisy input</span><span class="chips"><span class='mchip'>PESQ 1.94</span></span></div>
-<audio controls preload="none" src="audio/lsm1_noisy.wav"></audio></div><div class="variant"><div class="vhead"><span class="vlabel">SGMSE+ backbone &middot; N = 30</span><span class="chips"><span class='mchip'>PESQ 1.81</span><span class='mchip'>UTMOS 2.36</span><span class='mchip'>DNSMOS 2.62</span></span></div>
-<audio controls preload="none" src="audio/lsm1_backbone.wav"></audio></div><div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 12</span><span class="chips"><span class='mchip'>PESQ 2.73</span><span class='mchip'>UTMOS 3.18</span><span class='mchip'>DNSMOS 3.12</span></span></div>
-<audio controls preload="none" src="audio/lsm1_pace.wav"></audio></div><div class="variant v-clean"><div class="vhead"><span class="vlabel">Clean reference</span><span class="chips"></span></div>
-<audio controls preload="none" src="audio/lsm1_clean.wav"></audio></div></div></div><div class="samplecard"><div class="samplemeta"><span class="fname">lsm_0274_snr12.5.wav</span><span class="pairinfo">SGMSE+ at 30 steps &rarr; +PACE at 12 steps</span></div>
-<blockquote class="transcript">She poured into the dish a quantity from each of these bottles.</blockquote>
-<div class="vgrid"><div class="variant"><div class="vhead"><span class="vlabel">Noisy input</span><span class="chips"><span class='mchip'>PESQ 1.73</span></span></div>
-<audio controls preload="none" src="audio/lsm2_noisy.wav"></audio></div><div class="variant"><div class="vhead"><span class="vlabel">SGMSE+ backbone &middot; N = 30</span><span class="chips"><span class='mchip'>PESQ 3.34</span><span class='mchip'>UTMOS 4.20</span><span class='mchip'>DNSMOS 3.01</span></span></div>
-<audio controls preload="none" src="audio/lsm2_backbone.wav"></audio></div><div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 12</span><span class="chips"><span class='mchip'>PESQ 3.85</span><span class='mchip'>UTMOS 4.39</span><span class='mchip'>DNSMOS 3.32</span></span></div>
-<audio controls preload="none" src="audio/lsm2_pace.wav"></audio></div><div class="variant v-clean"><div class="vhead"><span class="vlabel">Clean reference</span><span class="chips"></span></div>
-<audio controls preload="none" src="audio/lsm2_clean.wav"></audio></div></div></div><div class="samplecard"><div class="samplemeta"><span class="fname">lsm_0031_snr17.5.wav</span><span class="pairinfo">SB at 50 steps &rarr; +PACE at 6 steps</span></div>
-<blockquote class="transcript">A voice from beyond the world was calling.</blockquote>
-<div class="vgrid"><div class="variant"><div class="vhead"><span class="vlabel">Noisy input</span><span class="chips"><span class='mchip'>PESQ 2.01</span></span></div>
-<audio controls preload="none" src="audio/lsm3_noisy.wav"></audio></div><div class="variant"><div class="vhead"><span class="vlabel">SB backbone &middot; N = 50</span><span class="chips"><span class='mchip'>PESQ 2.59</span><span class='mchip'>UTMOS 4.35</span><span class='mchip'>DNSMOS 3.39</span></span></div>
-<audio controls preload="none" src="audio/lsm3_backbone.wav"></audio></div><div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 6</span><span class="chips"><span class='mchip'>PESQ 3.53</span><span class='mchip'>UTMOS 4.27</span><span class='mchip'>DNSMOS 3.43</span></span></div>
-<audio controls preload="none" src="audio/lsm3_pace.wav"></audio></div><div class="variant v-clean"><div class="vhead"><span class="vlabel">Clean reference</span><span class="chips"></span></div>
-<audio controls preload="none" src="audio/lsm3_clean.wav"></audio></div></div></div></div><div class="benchgroup"><h3 class="title is-4">ESM (EARS + MUSAN) <span class="benchtag">Speech shift</span></h3>
-<p class="benchdesc">Expressive and emotional speaking styles.</p><div class="samplecard"><div class="samplemeta"><span class="fname">esm_0188_snr2.5.wav</span><span class="pairinfo">SB at 50 steps &rarr; +PACE at 12 steps</span></div>
-<blockquote class="transcript">I&#x27;m sorry I did that to you. I really didn&#x27;t mean to hurt you. I feel horrible that that happened to you.</blockquote>
-<div class="vgrid"><div class="variant"><div class="vhead"><span class="vlabel">Noisy input</span><span class="chips"><span class='mchip'>PESQ 1.73</span></span></div>
-<audio controls preload="none" src="audio/esm1_noisy.wav"></audio></div><div class="variant"><div class="vhead"><span class="vlabel">SB backbone &middot; N = 50</span><span class="chips"><span class='mchip'>PESQ 1.72</span><span class='mchip'>UTMOS 2.40</span><span class='mchip'>DNSMOS 1.87</span></span></div>
-<audio controls preload="none" src="audio/esm1_backbone.wav"></audio></div><div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 12</span><span class="chips"><span class='mchip'>PESQ 2.79</span><span class='mchip'>UTMOS 2.97</span><span class='mchip'>DNSMOS 2.69</span></span></div>
-<audio controls preload="none" src="audio/esm1_pace.wav"></audio></div><div class="variant v-clean"><div class="vhead"><span class="vlabel">Clean reference</span><span class="chips"></span></div>
-<audio controls preload="none" src="audio/esm1_clean.wav"></audio></div></div></div><div class="samplecard"><div class="samplemeta"><span class="fname">esm_0296_snr2.5.wav</span><span class="pairinfo">SB at 50 steps &rarr; +PACE at 12 steps</span></div>
-<blockquote class="transcript">Since then, physicists have found that it is not reflection, but refraction by the raindrops which causes the rainbows. Many complicated ideas about the rainbow have been formed.</blockquote>
-<div class="vgrid"><div class="variant"><div class="vhead"><span class="vlabel">Noisy input</span><span class="chips"><span class='mchip'>PESQ 1.41</span></span></div>
-<audio controls preload="none" src="audio/esm2_noisy.wav"></audio></div><div class="variant"><div class="vhead"><span class="vlabel">SB backbone &middot; N = 50</span><span class="chips"><span class='mchip'>PESQ 2.75</span><span class='mchip'>UTMOS 3.53</span><span class='mchip'>DNSMOS 3.27</span></span></div>
-<audio controls preload="none" src="audio/esm2_backbone.wav"></audio></div><div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 12</span><span class="chips"><span class='mchip'>PESQ 3.52</span><span class='mchip'>UTMOS 3.77</span><span class='mchip'>DNSMOS 3.31</span></span></div>
-<audio controls preload="none" src="audio/esm2_pace.wav"></audio></div><div class="variant v-clean"><div class="vhead"><span class="vlabel">Clean reference</span><span class="chips"></span></div>
-<audio controls preload="none" src="audio/esm2_clean.wav"></audio></div></div></div><div class="samplecard"><div class="samplemeta"><span class="fname">esm_0126_snr12.5.wav</span><span class="pairinfo">SB at 50 steps &rarr; +PACE at 12 steps</span></div>
-<blockquote class="transcript">That wall in the living room is white. There is one more piece of bread in the pantry. This door closes at 8 p.m. tonight.</blockquote>
-<div class="vgrid"><div class="variant"><div class="vhead"><span class="vlabel">Noisy input</span><span class="chips"><span class='mchip'>PESQ 2.56</span></span></div>
-<audio controls preload="none" src="audio/esm3_noisy.wav"></audio></div><div class="variant"><div class="vhead"><span class="vlabel">SB backbone &middot; N = 50</span><span class="chips"><span class='mchip'>PESQ 3.13</span><span class='mchip'>UTMOS 3.10</span><span class='mchip'>DNSMOS 3.14</span></span></div>
-<audio controls preload="none" src="audio/esm3_backbone.wav"></audio></div><div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 12</span><span class="chips"><span class='mchip'>PESQ 3.68</span><span class='mchip'>UTMOS 3.29</span><span class='mchip'>DNSMOS 3.06</span></span></div>
-<audio controls preload="none" src="audio/esm3_pace.wav"></audio></div><div class="variant v-clean"><div class="vhead"><span class="vlabel">Clean reference</span><span class="chips"></span></div>
-<audio controls preload="none" src="audio/esm3_clean.wav"></audio></div></div></div></div><div class="benchgroup"><h3 class="title is-4">EARS-WHAM <span class="benchtag">Recording shift</span></h3>
-<p class="benchdesc">Real microphone and room conditions.</p><div class="samplecard"><div class="samplemeta"><span class="fname">00071_6.1dB.wav</span><span class="pairinfo">SGMSE+ at 30 steps &rarr; +PACE at 20 steps</span></div>
-<blockquote class="transcript">I will not stay here. God, we simply must trust the character. Stay, stay, I will go myself. May one ask what it is for? He rushed to the window and opened the movable pane.</blockquote>
-<div class="vgrid"><div class="variant"><div class="vhead"><span class="vlabel">Noisy input</span><span class="chips"><span class='mchip'>PESQ 1.10</span></span></div>
-<audio controls preload="none" src="audio/ews1_noisy.wav"></audio></div><div class="variant"><div class="vhead"><span class="vlabel">SGMSE+ backbone &middot; N = 30</span><span class="chips"><span class='mchip'>PESQ 1.45</span><span class='mchip'>UTMOS 3.41</span><span class='mchip'>DNSMOS 3.12</span></span></div>
-<audio controls preload="none" src="audio/ews1_backbone.wav"></audio></div><div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 20</span><span class="chips"><span class='mchip'>PESQ 2.20</span><span class='mchip'>UTMOS 3.49</span><span class='mchip'>DNSMOS 3.25</span></span></div>
-<audio controls preload="none" src="audio/ews1_pace.wav"></audio></div><div class="variant v-clean"><div class="vhead"><span class="vlabel">Clean reference</span><span class="chips"></span></div>
-<audio controls preload="none" src="audio/ews1_clean.wav"></audio></div></div></div><div class="samplecard"><div class="samplemeta"><span class="fname">00831_17.1dB.wav</span><span class="pairinfo">FlowSE at 5 steps &rarr; +PACE at 3 steps</span></div>
-<blockquote class="transcript">I&#x27;m just sitting here looking at the sunset. This is the most peaceful place that I have been to in a long time. It&#x27;s the air, the cool air, and the sunset, and the sun.</blockquote>
-<div class="vgrid"><div class="variant"><div class="vhead"><span class="vlabel">Noisy input</span><span class="chips"><span class='mchip'>PESQ 1.62</span></span></div>
-<audio controls preload="none" src="audio/ews2_noisy.wav"></audio></div><div class="variant"><div class="vhead"><span class="vlabel">FlowSE backbone &middot; N = 5</span><span class="chips"><span class='mchip'>PESQ 2.20</span><span class='mchip'>UTMOS 3.72</span><span class='mchip'>DNSMOS 2.96</span></span></div>
-<audio controls preload="none" src="audio/ews2_backbone.wav"></audio></div><div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 3</span><span class="chips"><span class='mchip'>PESQ 2.84</span><span class='mchip'>UTMOS 3.62</span><span class='mchip'>DNSMOS 3.05</span></span></div>
-<audio controls preload="none" src="audio/ews2_pace.wav"></audio></div><div class="variant v-clean"><div class="vhead"><span class="vlabel">Clean reference</span><span class="chips"></span></div>
-<audio controls preload="none" src="audio/ews2_clean.wav"></audio></div></div></div><div class="samplecard"><div class="samplemeta"><span class="fname">00434_7.9dB.wav</span><span class="pairinfo">SGMSE+ at 30 steps &rarr; +PACE at 20 steps</span></div>
-<blockquote class="transcript">Okay. I usually go to bed around 7.30 or so. I take my clothes and I get a bath and then I come back and I read a book and then I go to sleep.</blockquote>
-<div class="vgrid"><div class="variant"><div class="vhead"><span class="vlabel">Noisy input</span><span class="chips"><span class='mchip'>PESQ 1.13</span></span></div>
-<audio controls preload="none" src="audio/ews3_noisy.wav"></audio></div><div class="variant"><div class="vhead"><span class="vlabel">SGMSE+ backbone &middot; N = 30</span><span class="chips"><span class='mchip'>PESQ 1.97</span><span class='mchip'>UTMOS 3.09</span><span class='mchip'>DNSMOS 3.24</span></span></div>
-<audio controls preload="none" src="audio/ews3_backbone.wav"></audio></div><div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 20</span><span class="chips"><span class='mchip'>PESQ 2.33</span><span class='mchip'>UTMOS 3.13</span><span class='mchip'>DNSMOS 3.30</span></span></div>
-<audio controls preload="none" src="audio/ews3_pace.wav"></audio></div><div class="variant v-clean"><div class="vhead"><span class="vlabel">Clean reference</span><span class="chips"></span></div>
-<audio controls preload="none" src="audio/ews3_clean.wav"></audio></div></div></div></div>
-  </div>
-</section>
+
 
 <section class="section pt-2" id="humanoid">
   <div class="container is-max-desktop">
     <h2 class="title is-3">Live on a humanoid head</h2>
-    <p class="content">Three of the utterances above, played back in a real room and captured by the raw front microphone of an Ameca humanoid head while the head was in motion. The clips document the deployment capture chain, real room acoustics, servo and fan noise of the moving head, with no studio processing. Five utterances are shown as triples, what the moving head heard, the frozen backbone at its default NFE, and the same backbone with +PACE at a reduced NFE, all on this real channel, with reference free DNSMOS overall scores on each clip. Quantitative evaluation on this recording channel is outside the scope of the paper.</p>
-    <div><div class="samplecard"><div class="samplemeta"><span class="pairinfo">Emotional speech &middot; captured by the moving head</span></div>
+    <p class="content">Utterances played in a real room and captured by the raw front microphone of an Ameca humanoid head while the head was in motion, with its servo and fan noise. Each card compares the frozen backbone at its default number of function evaluations against the same backbone with +PACE at a reduced number, on the identical captured input. Chips report the measured wall clock seconds per utterance on one GPU and the reference free DNSMOS overall score. The +PACE output arrives in less than half the compute, listen for the difference.</p>
+    <div><div class="samplecard"><div class="samplemeta"><span class="pairinfo">Emotional speech + noise &middot; captured by the moving head</span></div>
 <div class="vgrid">
 <div class="variant"><div class="vhead"><span class="vlabel">Heard by the robot</span><span class="chips"><span class='mchip'>DNSMOS 1.09</span></span></div>
 <audio controls preload="none" src="audio/ameca_esm1_heard.wav"></audio></div>
-<div class="variant"><div class="vhead"><span class="vlabel">SB backbone &middot; N = 50</span><span class="chips"><span class='mchip'>DNSMOS 3.00</span></span></div>
+<div class="variant"><div class="vhead"><span class="vlabel">SB backbone</span><span class="chips"><span class='mchip'>N = 50</span><span class='mchip'>3.4 s</span><span class='mchip'>DNSMOS 3.00</span></span></div>
 <audio controls preload="none" src="audio/ameca_esm1_orig.wav"></audio></div>
-<div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 12</span><span class="chips"><span class='mchip'>DNSMOS 3.21</span></span></div>
+<div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE</span><span class="chips"><span class='mchip'><b>N = 12</b></span><span class='mchip'><b>0.8 s</b></span><span class='mchip'>DNSMOS 3.21</span></span></div>
 <audio controls preload="none" src="audio/ameca_esm1_pace.wav"></audio></div>
-</div></div><div class="samplecard"><div class="samplemeta"><span class="pairinfo">Real-recording style &middot; captured by the moving head</span></div>
+</div></div><div class="samplecard"><div class="samplemeta"><span class="pairinfo">Real-recording style + noise &middot; captured by the moving head</span></div>
 <div class="vgrid">
 <div class="variant"><div class="vhead"><span class="vlabel">Heard by the robot</span><span class="chips"><span class='mchip'>DNSMOS 1.12</span></span></div>
 <audio controls preload="none" src="audio/ameca_ews2_heard.wav"></audio></div>
-<div class="variant"><div class="vhead"><span class="vlabel">SB backbone &middot; N = 50</span><span class="chips"><span class='mchip'>DNSMOS 3.29</span></span></div>
+<div class="variant"><div class="vhead"><span class="vlabel">SB backbone</span><span class="chips"><span class='mchip'>N = 50</span><span class='mchip'>7.7 s</span><span class='mchip'>DNSMOS 3.29</span></span></div>
 <audio controls preload="none" src="audio/ameca_ews2_orig.wav"></audio></div>
-<div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 12</span><span class="chips"><span class='mchip'>DNSMOS 3.33</span></span></div>
+<div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE</span><span class="chips"><span class='mchip'><b>N = 12</b></span><span class='mchip'><b>1.8 s</b></span><span class='mchip'>DNSMOS 3.33</span></span></div>
 <audio controls preload="none" src="audio/ameca_ews2_pace.wav"></audio></div>
 </div></div><div class="samplecard"><div class="samplemeta"><span class="pairinfo">Out-of-family noise &middot; captured by the moving head</span></div>
 <div class="vgrid">
 <div class="variant"><div class="vhead"><span class="vlabel">Heard by the robot</span><span class="chips"><span class='mchip'>DNSMOS 1.21</span></span></div>
 <audio controls preload="none" src="audio/ameca_lsm3_heard.wav"></audio></div>
-<div class="variant"><div class="vhead"><span class="vlabel">SGMSE+ backbone &middot; N = 30</span><span class="chips"><span class='mchip'>DNSMOS 3.15</span></span></div>
+<div class="variant"><div class="vhead"><span class="vlabel">SGMSE+ backbone</span><span class="chips"><span class='mchip'>N = 30</span><span class='mchip'>2.7 s</span><span class='mchip'>DNSMOS 3.15</span></span></div>
 <audio controls preload="none" src="audio/ameca_lsm3_orig.wav"></audio></div>
-<div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 12</span><span class="chips"><span class='mchip'>DNSMOS 3.24</span></span></div>
+<div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE</span><span class="chips"><span class='mchip'><b>N = 12</b></span><span class='mchip'><b>1.0 s</b></span><span class='mchip'>DNSMOS 3.24</span></span></div>
 <audio controls preload="none" src="audio/ameca_lsm3_pace.wav"></audio></div>
-</div></div><div class="samplecard"><div class="samplemeta"><span class="pairinfo">In-domain speech &middot; captured by the moving head</span></div>
+</div></div><div class="samplecard"><div class="samplemeta"><span class="pairinfo">In-domain speech + noise &middot; captured by the moving head</span></div>
 <div class="vgrid">
 <div class="variant"><div class="vhead"><span class="vlabel">Heard by the robot</span><span class="chips"><span class='mchip'>DNSMOS 1.11</span></span></div>
 <audio controls preload="none" src="audio/ameca_vbd3_heard.wav"></audio></div>
-<div class="variant"><div class="vhead"><span class="vlabel">SGMSE+ backbone &middot; N = 30</span><span class="chips"><span class='mchip'>DNSMOS 3.13</span></span></div>
+<div class="variant"><div class="vhead"><span class="vlabel">SGMSE+ backbone</span><span class="chips"><span class='mchip'>N = 30</span><span class='mchip'>2.4 s</span><span class='mchip'>DNSMOS 3.13</span></span></div>
 <audio controls preload="none" src="audio/ameca_vbd3_orig.wav"></audio></div>
-<div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 12</span><span class="chips"><span class='mchip'>DNSMOS 3.12</span></span></div>
+<div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE</span><span class="chips"><span class='mchip'><b>N = 12</b></span><span class='mchip'><b>1.0 s</b></span><span class='mchip'>DNSMOS 3.12</span></span></div>
 <audio controls preload="none" src="audio/ameca_vbd3_pace.wav"></audio></div>
-</div></div><div class="samplecard"><div class="samplemeta"><span class="pairinfo">Expressive speech &middot; captured by the moving head</span></div>
+</div></div><div class="samplecard"><div class="samplemeta"><span class="pairinfo">Expressive speech + noise &middot; captured by the moving head</span></div>
 <div class="vgrid">
 <div class="variant"><div class="vhead"><span class="vlabel">Heard by the robot</span><span class="chips"><span class='mchip'>DNSMOS 1.22</span></span></div>
 <audio controls preload="none" src="audio/ameca_ews3_heard.wav"></audio></div>
-<div class="variant"><div class="vhead"><span class="vlabel">SB backbone &middot; N = 50</span><span class="chips"><span class='mchip'>DNSMOS 3.19</span></span></div>
+<div class="variant"><div class="vhead"><span class="vlabel">SB backbone</span><span class="chips"><span class='mchip'>N = 50</span><span class='mchip'>5.7 s</span><span class='mchip'>DNSMOS 3.19</span></span></div>
 <audio controls preload="none" src="audio/ameca_ews3_orig.wav"></audio></div>
-<div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE &middot; N = 12</span><span class="chips"><span class='mchip'>DNSMOS 3.27</span></span></div>
+<div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE</span><span class="chips"><span class='mchip'><b>N = 12</b></span><span class='mchip'><b>1.4 s</b></span><span class='mchip'>DNSMOS 3.27</span></span></div>
 <audio controls preload="none" src="audio/ameca_ews3_pace.wav"></audio></div>
+</div></div><div class="samplecard"><div class="samplemeta"><span class="pairinfo">Quiet room, channel only &middot; captured by the moving head</span></div>
+<div class="vgrid">
+<div class="variant"><div class="vhead"><span class="vlabel">Heard by the robot</span><span class="chips"><span class='mchip'>DNSMOS 1.21</span></span></div>
+<audio controls preload="none" src="audio/ameca_cp_vbd3_heard.wav"></audio></div>
+<div class="variant"><div class="vhead"><span class="vlabel">SB backbone</span><span class="chips"><span class='mchip'>N = 50</span><span class='mchip'>2.0 s</span><span class='mchip'>DNSMOS 3.44</span></span></div>
+<audio controls preload="none" src="audio/ameca_cp_vbd3_orig.wav"></audio></div>
+<div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE</span><span class="chips"><span class='mchip'><b>N = 12</b></span><span class='mchip'><b>0.5 s</b></span><span class='mchip'>DNSMOS 3.43</span></span></div>
+<audio controls preload="none" src="audio/ameca_cp_vbd3_pace.wav"></audio></div>
+</div></div><div class="samplecard"><div class="samplemeta"><span class="pairinfo">Quiet room, channel only &middot; captured by the moving head</span></div>
+<div class="vgrid">
+<div class="variant"><div class="vhead"><span class="vlabel">Heard by the robot</span><span class="chips"><span class='mchip'>DNSMOS 1.14</span></span></div>
+<audio controls preload="none" src="audio/ameca_cp_lsm2_heard.wav"></audio></div>
+<div class="variant"><div class="vhead"><span class="vlabel">SB backbone</span><span class="chips"><span class='mchip'>N = 50</span><span class='mchip'>2.3 s</span><span class='mchip'>DNSMOS 3.24</span></span></div>
+<audio controls preload="none" src="audio/ameca_cp_lsm2_orig.wav"></audio></div>
+<div class="variant v-pace"><div class="vhead"><span class="vlabel">+PACE</span><span class="chips"><span class='mchip'><b>N = 12</b></span><span class='mchip'><b>0.6 s</b></span><span class='mchip'>DNSMOS 3.24</span></span></div>
+<audio controls preload="none" src="audio/ameca_cp_lsm2_pace.wav"></audio></div>
 </div></div></div>
     <p class="content" style="margin-top:12px"></p>
   </div>
