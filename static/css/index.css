@@ -10,6 +10,7 @@ body{font-family:'Noto Sans',-apple-system,'Segoe UI',Roboto,Helvetica,Arial,san
 .altband{background:#f6f5f1}
 .pagefig{margin:0 auto;text-align:center}
 .pagefig img{max-width:100%;height:auto}
+.teaserfig img{max-width:660px;width:100%}
 .casefig img{max-width:860px;width:100%}
 .pagefig figcaption{font-size:.86rem;color:#6d6a60;max-width:60rem;margin:.6rem auto 0;text-align:left}
 .abstract-text{max-width:60rem;margin:0 auto}
@@ -35,3 +36,58 @@ audio{width:100%;height:32px;display:block}
 audio:focus-visible{outline:2px solid #0c6b4d;outline-offset:2px;border-radius:999px}
 .bibtex{background:#f6f5f1;border:1px solid #e3e1d8;border-radius:8px;overflow-x:auto}
 .footer{padding:2rem 1.5rem;background:#fff}
+
+/* ---- robot demo (video) ---- */
+.container.is-robot{max-width:1480px;margin:0 auto;padding:0 1rem}
+.robotintro{max-width:64rem;color:#3a3a35}
+.robotfoot{max-width:64rem;font-size:.86rem;color:#6d6a60;border-top:1px solid #e3e1d8;padding-top:.9rem;margin-top:1.6rem}
+.uttrow{border-top:1px solid #e3e1d8;padding:1.4rem 0 .4rem}
+.uttrow:first-of-type{border-top:none}
+.utthead{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
+.uttid{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:700;font-size:1rem;color:#2b2b28}
+.uttscene{font-size:.8rem;color:#8a877c}
+.uttrow .transcript{margin:.2rem 0 .95rem;font-size:.95rem;max-width:80ch}
+.bbgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(640px,1fr));gap:14px}
+.bbbox{border:1px solid #e3e1d8;border-radius:10px;background:#fffefb;padding:12px 14px 14px}
+.bbname{font-size:.95rem;font-weight:700;margin:0 0 10px;display:flex;align-items:baseline;gap:.5rem}
+.spchip{color:#0a5c42;background:#dcefe6;border-color:#9cc9b6}
+.unitgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(295px,1fr));gap:10px}
+.unit{border:1px solid #e3e1d8;border-radius:8px;background:#f7f6f2;padding:9px 10px}
+.unit.u-pace{border-color:#b9d9cc;background:#eaf4ef}
+.uhead{display:flex;justify-content:space-between;align-items:baseline;gap:6px;flex-wrap:wrap;margin-bottom:7px}
+.ulabel{font-weight:600;font-size:.8rem;color:#6d6a60}
+.u-pace .ulabel{color:#0a5c42}
+.ubody{display:flex;gap:9px;align-items:flex-start}
+video.rv{width:132px;flex:0 0 132px;height:198px;border-radius:6px;background:#0b0e14;display:block}
+.mods{flex:1;min-width:0;display:flex;flex-direction:column;gap:7px}
+.mod{min-width:0}
+.mlab{font-size:.68rem;color:#6d6a60;margin-bottom:2px;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.mtimer{border:1px solid #e3e1d8;border-radius:6px;background:#fffefb;padding:5px 7px 6px}
+.u-pace .mtimer{border-color:#cfe5da}
+.tnum{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;font-size:1.28rem;font-weight:700;line-height:1.1;color:#b8b5aa}
+.tunit{font-size:.7rem;font-weight:600;margin-left:2px;color:#b8b5aa}
+.mtimer .tnum,.mtimer .tunit{color:#c2bfb6;transition:color .12s}
+.mtimer.is-inf .tnum,.mtimer.is-inf .tunit{color:#c07a1e}
+.mtimer.is-push .tnum,.mtimer.is-push .tunit{color:#d9a441}
+.mtimer.is-done .tnum,.mtimer.is-done .tunit{color:#0a5c42}
+.tcap{min-height:1.1em}
+.mtimer.is-inf .tcap{color:#c07a1e}.mtimer.is-done .tcap{color:#0a5c42}
+.tcap{font-size:.6rem;color:#8a877c;letter-spacing:.02em;margin-bottom:5px}
+.tl{position:relative;display:flex;height:9px;border-radius:5px;overflow:hidden;background:#e9e7df}
+.seg{display:block;height:100%}
+.seg.sh{background:#c9c6ba}.seg.si{background:#e0a13c}.seg.sp{background:#f0cf94}.seg.sr{background:#7fc3a5}
+.u-pace .seg.sr{background:#3fa87d}
+
+.tleg{display:flex;flex-wrap:wrap;gap:1px 8px;font-size:.58rem;color:#8a877c;margin-top:4px;line-height:1.5}
+.tleg span{display:inline-flex;align-items:center;white-space:nowrap}
+.tleg span::before{content:'';display:inline-block;width:7px;height:7px;border-radius:2px;margin-right:3px}
+.tleg .kh::before{background:#c9c6ba}.tleg .ki::before{background:#e0a13c}
+.tleg .kp::before{background:#f0cf94}.tleg .kr::before{background:#7fc3a5}
+.u-pace .tleg .kr::before{background:#3fa87d}
+.tl .cur{position:absolute;top:-2px;bottom:-2px;left:0;width:2px;background:#2b2b28;border-radius:2px;transition:none}
+
+.mod audio{height:30px}
+.fbnote{font-size:.62rem;color:#a5a29a;cursor:help;border-bottom:1px dotted #cfccc2}
+@media(max-width:900px){.ubody{flex-direction:column}video.rv{width:100%;flex:none;height:auto;aspect-ratio:2/3;max-width:220px;margin:0 auto}}
+
+.tl{background:#f0eee7;box-shadow:inset 0 0 0 1px #e3e1d8}
