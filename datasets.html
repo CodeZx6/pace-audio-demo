@@ -31,8 +31,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered"><div class="column has-text-centered">
         <h1 class="title is-2 publication-title">LSM &amp; ESM</h1>
-        <div class="is-size-5">Controlled distribution-shift benchmarks for speech enhancement</div>
-        <div class="is-size-6 publication-venue" style="margin-top:.5rem">Companion data for a paper under double blind review</div>
+        <div class="is-size-5">Controlled acoustic-shift benchmarks for speech enhancement</div>
         <div style="margin-top:.7rem">
           <span class="dbadge ok">16 kHz &middot; PCM16</span>
           <span class="dbadge">300 pairs each</span>
@@ -52,14 +51,13 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3">Overview</h2>
     <div class="content has-text-justified">
-      <p>LSM and ESM are two reproducible noisy-speech benchmarks built to isolate a
-      single distribution shift at a time. Both draw their noise from MUSAN and follow
-      one shared mixing protocol, so the only thing that changes between them is the
-      speech source. <b>LSM</b> (LibriSpeech-MUSAN) pairs read speech with out-of-family
-      noise and isolates a <b>noise-family shift</b>. <b>ESM</b> (EARS-MUSAN) replaces the
-      read speech with expressive EARS speech under the identical recipe and isolates a
-      <b>speech-style shift</b>. Holding everything else fixed lets a single benchmark
-      leg attribute a change in enhancement quality to one axis of the shift.</p>
+      <p>LSM and ESM are reproducible noisy-speech benchmarks designed to separate
+      noise-family and speech-style shifts. <b>LSM</b> (LibriSpeech-MUSAN) pairs read
+      speech with out-of-family MUSAN noise, providing a controlled <b>noise-family
+      shift</b>. <b>ESM</b> (EARS-MUSAN) retains the MUSAN noise source and the same mixing
+      protocol but replaces LibriSpeech with expressive EARS speech. Comparing ESM with
+      LSM therefore isolates the additional effect of a <b>speech-style shift</b> while
+      holding the noise protocol fixed.</p>
     </div>
   </div>
 </section>
@@ -88,15 +86,15 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3">Construction protocol</h2>
     <div class="content has-text-justified">
-      <p>Both sets are produced by one script and differ only in the speech source. For
-      each pair the speech and noise are resampled to 16 kHz, the noise is looped to the
-      speech length and offset by a seeded fraction, and its power is scaled to the target
-      SNR. A single anti-clip rescale is applied to the clean and noisy signals together,
-      so the pair stays perfectly aligned. Every random draw comes from one seeded
-      generator (<span class="mono">seed 1234</span> for LSM, <span class="mono">seed 4321</span>
-      for ESM), which makes the build bit-exact: regenerating from the public source
-      corpora reproduces the released waveforms, and the published SHA-256 lists let you
-      verify it.</p>
+      <p>Parallel deterministic scripts implement the same construction protocol and
+      differ only in the speech source. For each pair, speech and noise are resampled to
+      16 kHz. The noise is looped to the speech duration, shifted by a seeded offset, and
+      scaled to the target SNR. A common rescaling factor then prevents clipping while
+      preserving sample alignment between the clean reference and noisy mixture. Every
+      random draw comes from a seeded generator (<span class="mono">seed 1234</span> for LSM,
+      <span class="mono">seed 4321</span> for ESM). Regeneration from the public source
+      corpora reproduces the released waveforms, and the published SHA-256 lists verify
+      the resulting files.</p>
     </div>
   </div>
 </section>
@@ -136,9 +134,9 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3">Download &amp; reproduce</h2>
     <div class="content">
-      <p>Two ways to obtain the data. The lightweight route regenerates the exact
-      waveforms from the public source corpora; the packaged route downloads the
-      mixtures directly.</p>
+      <p>The data can be obtained in two ways. The lightweight route regenerates the
+      waveforms from the public source corpora, while the packaged route downloads the
+      released mixtures directly.</p>
 
       <h3 class="title is-5">Regenerate from source (bit-exact)</h3>
       <ul class="dllist">
@@ -173,12 +171,6 @@
     </div>
   </div>
 </section>
-
-<footer class="footer">
-  <div class="container is-max-desktop">
-    <p class="has-text-centered is-size-7">Companion data page for an anonymized submission under review. This page contains no information identifying the authors. Page template adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a> and <a href="https://nerfies.github.io/">Nerfies</a> (CC BY-SA 4.0).</p>
-  </div>
-</footer>
 
 </body>
 </html>

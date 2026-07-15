@@ -15,7 +15,6 @@
         <div class="column has-text-centered">
           <h1 class="title is-2 publication-title">RAPID: Reliable Acoustic Priors for Efficient Inference in Diffusion-based Speech Enhancement</h1>
           <div class="is-size-5 publication-authors"><span class="author-block">Anonymous authors</span></div>
-          <div class="is-size-6 publication-venue">Under double blind review</div>
           <div class="publication-links">
             <span class="link-block"><a class="external-link button is-primary is-rounded is-small" href="#humanoid">&#128266;&nbsp;Robot listening demo</a></span>
             <span class="link-block"><a class="external-link button is-dark is-rounded is-small" href="datasets.html">&#128451;&nbsp;LSM &amp; ESM benchmarks</a></span>
@@ -29,7 +28,7 @@
 <section class="section pt-0">
   <div class="container is-max-desktop">
     <figure class="pagefig teaserfig"><img src="static/images/teaser.png" alt="Deployment acoustic shift and the hierarchical structure of noisy speech">
-    <figcaption>Real world deployment shifts the acoustics away from the training corpus (left), yet the incoming mixture still carries measurable physical structure: a noise floor and an articulation rhythm above the fine speech detail that the learned prior must resolve (right).</figcaption></figure>
+    <figcaption>Real world deployment shifts the acoustics away from the training conditions (left). Yet each incoming mixture retains a hierarchy of evidence (right): the noise floor and speech rhythm can be measured directly, while ambiguous fine speech detail remains for the learned prior to resolve.</figcaption></figure>
   </div>
 </section>
 
@@ -44,15 +43,15 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3">Method</h2>
     <figure class="pagefig"><img src="static/images/method.png" alt="RAPID pipeline">
-    <figcaption>Overview of RAPID, a training free module that conditions a frozen diffusion and flow based sampler on physical priors measured from each incoming noisy utterance. With the learned field and sampler update rule frozen, these three controls define a RAPID-conditioned reverse trajectory toward enhanced speech. Because the physical priors are re-estimated for every utterance, RAPID responds to the deployment acoustics at the sampler inputs, while leaving ambiguous speech detail to the frozen learned prior.</figcaption></figure>
+    <figcaption>Overview of RAPID. Physical priors measured from each noisy utterance correct the conditioning mixture, re-anchor the sampler starting state, and determine a validated generation budget. The learned field and reverse update rule remain frozen, leaving the sampler to resolve only the ambiguous speech detail that cannot be measured reliably from the input.</figcaption></figure>
   </div>
 </section>
 
 <section class="section pt-2" id="humanoid">
   <div class="container is-robot">
-    <h2 class="title is-3">Live on a humanoid head</h2>
-    <p class="content robotintro">Noisy utterances were played into a real room and picked up by the ear microphones of an Ameca humanoid head. Each captured utterance was enhanced on a remote GPU, and the enhanced speech was played back through the robot&rsquo;s chest speaker. The nine utterances below come from a single continuous take: four passes over the same nine sentences, each backbone at its default number of function evaluations (NFE) and the same frozen checkpoint with +RAPID at a reduced NFE. Nothing is cut &mdash; the wait you see is the wait that happened in the room.</p>
-    <p class="content robotintro">Every trial has the same four stages: the robot <b>hears</b> the utterance, the frozen sampler runs its <b>inference</b>, the enhanced audio is <b>pushed</b> across the network into the robot&rsquo;s playback pipeline, and the robot <b>repeats</b> it. All four timelines in a row are drawn on one shared axis, so the stages line up and can be read off against each other: hearing and repeat are identical by construction, push is a fixed cost of a few tenths of a second, and inference is the only stage +RAPID touches. Under each video you can also listen to the two ends of the pipeline on their own &mdash; what reached the microphones, and the enhanced speech that came back.</p>
+    <h2 class="title is-3">RAPID on an Ameca humanoid</h2>
+    <p class="content robotintro">We replay noisy utterances in a real room and capture them with the ear microphones of an Ameca humanoid. A remote GPU enhances each capture, and Ameca repeats the result through its chest speaker. The videos show four continuous passes over the same nine sentences: two frozen backbones, each evaluated at its default number of function evaluations (NFE) and with RAPID at a reduced NFE. Both settings use the same checkpoint. The videos are uncut, so the visible waiting time is the end-to-end delay recorded in the room.</p>
+    <p class="content robotintro">Each trial follows four stages: Ameca <b>hears</b> the utterance, the frozen sampler runs <b>inference</b>, the enhanced audio is <b>transferred</b> to the playback pipeline, and Ameca <b>repeats</b> it. Timelines within each row share one time axis for direct comparison. Hearing and playback are identical by construction, network transfer adds a fixed overhead of a few tenths of a second, and only inference changes between the default sampler and RAPID. The audio players below each video isolate the microphone capture and the corresponding enhanced output.</p>
     <article class='uttrow'><p class='transcript'>You can see it on the training ground and around the hotel.&hellip;</p><div class='bbgrid'><section class="bbbox">
 <h4 class="bbname">Schr&ouml;dinger bridge</h4>
 <div class="unitgrid"><div class="unit u-rapid">
@@ -666,15 +665,10 @@
  <div class="mod"><div class="mlab">Enhanced speech</div>
   <audio controls preload="none" src="robot/audio/enh_sgmse_orig_ews2.wav"></audio></div>
 </div></div></div></div></section></div></article>
-    <p class="content robotfoot">The timer starts the moment the speaker falls silent and stops when the robot&rsquo;s own speaker begins to sound, so it carries the sampler, the network hop and the playback pipeline together. It is read off the recording&rsquo;s audio track and agrees with the sampler&rsquo;s logged inference time to within 0.1&ndash;0.6&nbsp;s, which is exactly the push. Over the nine utterances the Schr&ouml;dinger bridge answers in <b>1.68&nbsp;s</b> with +RAPID against 4.93&nbsp;s at its default, and SGMSE+ in <b>2.73&nbsp;s</b> against 5.78&nbsp;s. In 3 of the 36 trials a logging fault truncated the archived copy of the enhanced speech; those players carry the offline re-run of the same enhancer on the same input, and the audio heard in the video is untouched.</p>
+    <p class="content robotfoot">End-to-end response latency is measured from the moment the input speaker falls silent until Ameca&rsquo;s chest speaker begins playback. It therefore includes enhancement, network transfer, and the playback handoff. Measurements from the recording audio track differ from the logged inference time by 0.1&ndash;0.6&nbsp;s, corresponding to this transfer overhead. Averaged over the nine utterances, the Schr&ouml;dinger bridge responds in <b>1.68&nbsp;s</b> with RAPID versus 4.93&nbsp;s at its default, while SGMSE+ responds in <b>2.73&nbsp;s</b> versus 5.78&nbsp;s. In 3 of the 36 trials, a logging fault truncated the archived enhanced waveform. The affected audio players use an offline rerun of the same frozen enhancer on the same input; the audio and timing shown in each video remain untouched.</p>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container is-max-desktop">
-    <p class="has-text-centered is-size-7">Page template adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a> and <a href="https://nerfies.github.io/">Nerfies</a> (CC BY-SA 4.0). This page contains no information identifying the authors.</p>
-  </div>
-</footer>
 <script>
 document.addEventListener('play',function(e){
  var t=e.target.tagName;
