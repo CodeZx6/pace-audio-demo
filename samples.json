@@ -8,11 +8,11 @@
   "bbN": 5,
   "pesq_noisy": 2.25,
   "pesq_backbone": 2.31,
-  "pesq_pace": 3.87,
+  "pesq_rapid": 3.87,
   "utmos_backbone": 3.67,
-  "utmos_pace": 3.74,
+  "utmos_rapid": 3.74,
   "dnsmos_backbone": 3.14,
-  "dnsmos_pace": 3.23,
+  "dnsmos_rapid": 3.23,
   "text": "The album was widely expected to be a commercial disaster."
  },
  {
@@ -24,11 +24,11 @@
   "bbN": 50,
   "pesq_noisy": 1.32,
   "pesq_backbone": 2.94,
-  "pesq_pace": 3.2,
+  "pesq_rapid": 3.2,
   "utmos_backbone": 3.68,
-  "utmos_pace": 4.0,
+  "utmos_rapid": 4.0,
   "dnsmos_backbone": 2.93,
-  "dnsmos_pace": 3.16,
+  "dnsmos_rapid": 3.16,
   "text": "To do so, he reckons that a good opening result is essential."
  },
  {
@@ -40,11 +40,11 @@
   "bbN": 30,
   "pesq_noisy": 1.24,
   "pesq_backbone": 1.53,
-  "pesq_pace": 3.19,
+  "pesq_rapid": 3.19,
   "utmos_backbone": 3.89,
-  "utmos_pace": 4.12,
+  "utmos_rapid": 4.12,
   "dnsmos_backbone": 3.45,
-  "dnsmos_pace": 3.36,
+  "dnsmos_rapid": 3.36,
   "text": "You can see it on the training ground and around the hotel."
  },
  {
@@ -56,11 +56,11 @@
   "bbN": 30,
   "pesq_noisy": 1.27,
   "pesq_backbone": 2.2,
-  "pesq_pace": 2.76,
+  "pesq_rapid": 2.76,
   "utmos_backbone": 3.66,
-  "utmos_pace": 4.07,
+  "utmos_rapid": 4.07,
   "dnsmos_backbone": 3.41,
-  "dnsmos_pace": 3.37,
+  "dnsmos_rapid": 3.37,
   "text": "in the audience and make guilty faces? He may try to phone us. Here's where luck would  normally step in. Within this framework, what followed was strained. Even macabre."
  },
  {
@@ -72,11 +72,11 @@
   "bbN": 30,
   "pesq_noisy": 2.16,
   "pesq_backbone": 2.3,
-  "pesq_pace": 2.68,
+  "pesq_rapid": 2.68,
   "utmos_backbone": 4.05,
-  "utmos_pace": 4.26,
+  "utmos_rapid": 4.26,
   "dnsmos_backbone": 3.37,
-  "dnsmos_pace": 3.46,
+  "dnsmos_rapid": 3.46,
   "text": "The National Historical Survey found seismic activity.  Corey attacked the project with extra determination.  You always come up with pathological examples.  Put the butcher block table in the garage."
  },
  {
@@ -88,11 +88,11 @@
   "bbN": 30,
   "pesq_noisy": 2.15,
   "pesq_backbone": 2.36,
-  "pesq_pace": 2.59,
+  "pesq_rapid": 2.59,
   "utmos_backbone": 3.86,
-  "utmos_pace": 3.96,
+  "utmos_rapid": 3.96,
   "dnsmos_backbone": 3.34,
-  "dnsmos_pace": 3.33,
+  "dnsmos_rapid": 3.33,
   "text": "had a tiny envelope tied to its wrist.  Diversity of perception, yes.  Diversity of fact, yes.  To some extent, predispositions."
  },
  {
@@ -104,11 +104,11 @@
   "bbN": 30,
   "pesq_noisy": 1.94,
   "pesq_backbone": 1.81,
-  "pesq_pace": 2.73,
+  "pesq_rapid": 2.73,
   "utmos_backbone": 2.36,
-  "utmos_pace": 3.18,
+  "utmos_rapid": 3.18,
   "dnsmos_backbone": 2.62,
-  "dnsmos_pace": 3.12,
+  "dnsmos_rapid": 3.12,
   "text": "Thus, it is that the honor of three is saved, our country, our masters, and our own."
  },
  {
@@ -120,11 +120,11 @@
   "bbN": 30,
   "pesq_noisy": 1.73,
   "pesq_backbone": 3.34,
-  "pesq_pace": 3.85,
+  "pesq_rapid": 3.85,
   "utmos_backbone": 4.2,
-  "utmos_pace": 4.39,
+  "utmos_rapid": 4.39,
   "dnsmos_backbone": 3.01,
-  "dnsmos_pace": 3.32,
+  "dnsmos_rapid": 3.32,
   "text": "She poured into the dish a quantity from each of these bottles."
  },
  {
@@ -136,11 +136,11 @@
   "bbN": 50,
   "pesq_noisy": 2.01,
   "pesq_backbone": 2.59,
-  "pesq_pace": 3.53,
+  "pesq_rapid": 3.53,
   "utmos_backbone": 4.35,
-  "utmos_pace": 4.27,
+  "utmos_rapid": 4.27,
   "dnsmos_backbone": 3.39,
-  "dnsmos_pace": 3.43,
+  "dnsmos_rapid": 3.43,
   "text": "A voice from beyond the world was calling."
  },
  {
@@ -152,11 +152,11 @@
   "bbN": 50,
   "pesq_noisy": 1.73,
   "pesq_backbone": 1.72,
-  "pesq_pace": 2.79,
+  "pesq_rapid": 2.79,
   "utmos_backbone": 2.4,
-  "utmos_pace": 2.97,
+  "utmos_rapid": 2.97,
   "dnsmos_backbone": 1.87,
-  "dnsmos_pace": 2.69,
+  "dnsmos_rapid": 2.69,
   "text": "I'm sorry I did that to you. I really didn't mean to hurt you. I feel horrible that that happened to you."
  },
  {
@@ -168,11 +168,11 @@
   "bbN": 50,
   "pesq_noisy": 1.41,
   "pesq_backbone": 2.75,
-  "pesq_pace": 3.52,
+  "pesq_rapid": 3.52,
   "utmos_backbone": 3.53,
-  "utmos_pace": 3.77,
+  "utmos_rapid": 3.77,
   "dnsmos_backbone": 3.27,
-  "dnsmos_pace": 3.31,
+  "dnsmos_rapid": 3.31,
   "text": "Since then, physicists have found that it is not reflection, but refraction by the raindrops which causes the rainbows. Many complicated ideas about the rainbow have been formed."
  },
  {
@@ -184,11 +184,11 @@
   "bbN": 50,
   "pesq_noisy": 2.56,
   "pesq_backbone": 3.13,
-  "pesq_pace": 3.68,
+  "pesq_rapid": 3.68,
   "utmos_backbone": 3.1,
-  "utmos_pace": 3.29,
+  "utmos_rapid": 3.29,
   "dnsmos_backbone": 3.14,
-  "dnsmos_pace": 3.06,
+  "dnsmos_rapid": 3.06,
   "text": "That wall in the living room is white. There is one more piece of bread in the pantry. This door closes at 8 p.m. tonight."
  },
  {
@@ -200,11 +200,11 @@
   "bbN": 30,
   "pesq_noisy": 1.1,
   "pesq_backbone": 1.45,
-  "pesq_pace": 2.2,
+  "pesq_rapid": 2.2,
   "utmos_backbone": 3.41,
-  "utmos_pace": 3.49,
+  "utmos_rapid": 3.49,
   "dnsmos_backbone": 3.12,
-  "dnsmos_pace": 3.25,
+  "dnsmos_rapid": 3.25,
   "text": "I will not stay here. God, we simply must trust the character. Stay, stay, I will go myself. May one ask what it is for? He rushed to the window and opened the movable pane."
  },
  {
@@ -216,11 +216,11 @@
   "bbN": 5,
   "pesq_noisy": 1.62,
   "pesq_backbone": 2.2,
-  "pesq_pace": 2.84,
+  "pesq_rapid": 2.84,
   "utmos_backbone": 3.72,
-  "utmos_pace": 3.62,
+  "utmos_rapid": 3.62,
   "dnsmos_backbone": 2.96,
-  "dnsmos_pace": 3.05,
+  "dnsmos_rapid": 3.05,
   "text": "I'm just sitting here looking at the sunset. This is the most peaceful place that I have been to in a long time. It's the air, the cool air, and the sunset, and the sun."
  },
  {
@@ -232,11 +232,11 @@
   "bbN": 30,
   "pesq_noisy": 1.13,
   "pesq_backbone": 1.97,
-  "pesq_pace": 2.33,
+  "pesq_rapid": 2.33,
   "utmos_backbone": 3.09,
-  "utmos_pace": 3.13,
+  "utmos_rapid": 3.13,
   "dnsmos_backbone": 3.24,
-  "dnsmos_pace": 3.3,
+  "dnsmos_rapid": 3.3,
   "text": "Okay. I usually go to bed around 7.30 or so. I take my clothes and I get a bath and then I come back and I read a book and then I go to sleep."
  }
 ]

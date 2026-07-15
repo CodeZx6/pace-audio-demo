@@ -55,10 +55,10 @@
     <p class="content robotintro">Every trial has the same four stages: the robot <b>hears</b> the utterance, the frozen sampler runs its <b>inference</b>, the enhanced audio is <b>pushed</b> across the network into the robot&rsquo;s playback pipeline, and the robot <b>repeats</b> it. All four timelines in a row are drawn on one shared axis, so the stages line up and can be read off against each other: hearing and repeat are identical by construction, push is a fixed cost of a few tenths of a second, and inference is the only stage +RAPID touches. Under each video you can also listen to the two ends of the pipeline on their own &mdash; what reached the microphones, and the enhanced speech that came back.</p>
     <article class='uttrow'><p class='transcript'>You can see it on the training ground and around the hotel.&hellip;</p><div class='bbgrid'><section class="bbbox">
 <h4 class="bbname">Schr&ouml;dinger bridge</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>3.0&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_pace_vbd3.jpg" src="robot/video/sb_pace_vbd3.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_rapid_vbd3.jpg" src="robot/video/sb_rapid_vbd3.mp4"
  data-se="3.95" data-rp="4.68" data-lat="0.73" data-cmp="0.68" data-clip="8.63" data-axis="10.32"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -70,7 +70,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_vbd3.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sb_pace_vbd3.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sb_rapid_vbd3.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 50</span></span></div>
 <div class="ubody">
@@ -89,10 +89,10 @@
   <audio controls preload="none" src="robot/audio/enh_sb_orig_vbd3.wav"></audio></div>
 </div></div></div></div></section><section class="bbbox">
 <h4 class="bbname">SGMSE+</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>2.1&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_pace_vbd3.jpg" src="robot/video/sgmse_pace_vbd3.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_rapid_vbd3.jpg" src="robot/video/sgmse_rapid_vbd3.mp4"
  data-se="3.95" data-rp="5.07" data-lat="1.12" data-cmp="1.14" data-clip="9.02" data-axis="10.32"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -104,7 +104,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_vbd3.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sgmse_pace_vbd3.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sgmse_rapid_vbd3.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 30</span></span></div>
 <div class="ubody">
@@ -123,10 +123,10 @@
   <audio controls preload="none" src="robot/audio/enh_sgmse_orig_vbd3.wav"></audio></div>
 </div></div></div></div></section></div></article><article class='uttrow'><p class='transcript'>A voice from beyond the world was calling.&hellip;</p><div class='bbgrid'><section class="bbbox">
 <h4 class="bbname">Schr&ouml;dinger bridge</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>3.0&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_pace_lsm3.jpg" src="robot/video/sb_pace_lsm3.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_rapid_lsm3.jpg" src="robot/video/sb_rapid_lsm3.mp4"
  data-se="4.15" data-rp="4.89" data-lat="0.74" data-cmp="0.72" data-clip="9.04" data-axis="11.07"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -138,7 +138,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_lsm3.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sb_pace_lsm3.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sb_rapid_lsm3.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 50</span></span></div>
 <div class="ubody">
@@ -157,10 +157,10 @@
   <audio controls preload="none" src="robot/audio/enh_sb_orig_lsm3.wav"></audio></div>
 </div></div></div></div></section><section class="bbbox">
 <h4 class="bbname">SGMSE+</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>2.1&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_pace_lsm3.jpg" src="robot/video/sgmse_pace_lsm3.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_rapid_lsm3.jpg" src="robot/video/sgmse_rapid_lsm3.mp4"
  data-se="4.15" data-rp="5.37" data-lat="1.22" data-cmp="1.23" data-clip="9.52" data-axis="11.07"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -172,7 +172,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_lsm3.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sgmse_pace_lsm3.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sgmse_rapid_lsm3.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 30</span></span></div>
 <div class="ubody">
@@ -191,10 +191,10 @@
   <audio controls preload="none" src="robot/audio/enh_sgmse_orig_lsm3.wav"></audio></div>
 </div></div></div></div></section></div></article><article class='uttrow'><p class='transcript'>The National Historical Survey found seismic activity.  Corey attacked the project with ex&hellip;</p><div class='bbgrid'><section class="bbbox">
 <h4 class="bbname">Schr&ouml;dinger bridge</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>3.5&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_pace_dns2.jpg" src="robot/video/sb_pace_dns2.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_rapid_dns2.jpg" src="robot/video/sb_rapid_dns2.mp4"
  data-se="11.0" data-rp="12.63" data-lat="1.63" data-cmp="1.29" data-clip="23.63" data-axis="27.63"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -206,7 +206,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_dns2.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sb_pace_dns2.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sb_rapid_dns2.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 50</span></span></div>
 <div class="ubody">
@@ -225,10 +225,10 @@
   <audio controls preload="none" src="robot/audio/enh_sb_orig_dns2.wav"></audio></div>
 </div></div></div></div></section><section class="bbbox">
 <h4 class="bbname">SGMSE+</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>2.3&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_pace_dns2.jpg" src="robot/video/sgmse_pace_dns2.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_rapid_dns2.jpg" src="robot/video/sgmse_rapid_dns2.mp4"
  data-se="11.0" data-rp="13.55" data-lat="2.55" data-cmp="2.35" data-clip="24.55" data-axis="27.63"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -240,7 +240,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_dns2.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sgmse_pace_dns2.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sgmse_rapid_dns2.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 30</span></span></div>
 <div class="ubody">
@@ -259,10 +259,10 @@
   <audio controls preload="none" src="robot/audio/enh_sgmse_orig_dns2.wav"></audio></div>
 </div></div></div></div></section></div></article><article class='uttrow'><p class='transcript'>had a tiny envelope tied to its wrist.  Diversity of perception, yes.  Diversity of fact,&hellip;</p><div class='bbgrid'><section class="bbbox">
 <h4 class="bbname">Schr&ouml;dinger bridge</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>3.6&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_pace_dns3.jpg" src="robot/video/sb_pace_dns3.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_rapid_dns3.jpg" src="robot/video/sb_rapid_dns3.mp4"
  data-se="11.0" data-rp="12.56" data-lat="1.56" data-cmp="1.21" data-clip="23.56" data-axis="27.5"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -274,7 +274,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_dns3.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sb_pace_dns3.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sb_rapid_dns3.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 50</span></span></div>
 <div class="ubody">
@@ -293,10 +293,10 @@
   <audio controls preload="none" src="robot/audio/enh_sb_orig_dns3.wav"></audio></div>
 </div></div></div></div></section><section class="bbbox">
 <h4 class="bbname">SGMSE+</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>2.3&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_pace_dns3.jpg" src="robot/video/sgmse_pace_dns3.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_rapid_dns3.jpg" src="robot/video/sgmse_rapid_dns3.mp4"
  data-se="11.0" data-rp="13.5" data-lat="2.50" data-cmp="2.27" data-clip="24.5" data-axis="27.5"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -308,7 +308,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_dns3.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sgmse_pace_dns3.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sgmse_rapid_dns3.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 30</span></span></div>
 <div class="ubody">
@@ -327,10 +327,10 @@
   <audio controls preload="none" src="robot/audio/enh_sgmse_orig_dns3.wav"></audio></div>
 </div></div></div></div></section></div></article><article class='uttrow'><p class='transcript'>in the audience and make guilty faces? He may try to phone us. Here&#x27;s where luck would  no&hellip;</p><div class='bbgrid'><section class="bbbox">
 <h4 class="bbname">Schr&ouml;dinger bridge</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>3.6&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_pace_dns1.jpg" src="robot/video/sb_pace_dns1.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_rapid_dns1.jpg" src="robot/video/sb_rapid_dns1.mp4"
  data-se="11.0" data-rp="12.67" data-lat="1.67" data-cmp="1.20" data-clip="23.67" data-axis="27.48"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -342,7 +342,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_dns1.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sb_pace_dns1.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sb_rapid_dns1.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 50</span></span></div>
 <div class="ubody">
@@ -361,10 +361,10 @@
   <audio controls preload="none" src="robot/audio/enh_sb_orig_dns1.wav"></audio></div>
 </div></div></div></div></section><section class="bbbox">
 <h4 class="bbname">SGMSE+</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>2.3&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_pace_dns1.jpg" src="robot/video/sgmse_pace_dns1.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_rapid_dns1.jpg" src="robot/video/sgmse_rapid_dns1.mp4"
  data-se="11.0" data-rp="13.92" data-lat="2.92" data-cmp="2.26" data-clip="24.92" data-axis="27.48"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -376,7 +376,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_dns1.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sgmse_pace_dns1.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sgmse_rapid_dns1.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 30</span></span></div>
 <div class="ubody">
@@ -395,10 +395,10 @@
   <audio controls preload="none" src="robot/audio/enh_sgmse_orig_dns1.wav"></audio></div>
 </div></div></div></div></section></div></article><article class='uttrow'><p class='transcript'>I&#x27;m sorry I did that to you. I really didn&#x27;t mean to hurt you. I feel horrible that that h&hellip;</p><div class='bbgrid'><section class="bbbox">
 <h4 class="bbname">Schr&ouml;dinger bridge</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>3.4&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_pace_esm1.jpg" src="robot/video/sb_pace_esm1.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_rapid_esm1.jpg" src="robot/video/sb_rapid_esm1.mp4"
  data-se="7.89" data-rp="9.17" data-lat="1.28" data-cmp="1.02" data-clip="17.06" data-axis="19.99"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -410,7 +410,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_esm1.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sb_pace_esm1.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sb_rapid_esm1.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 50</span></span></div>
 <div class="ubody">
@@ -429,10 +429,10 @@
   <audio controls preload="none" src="robot/audio/enh_sb_orig_esm1.wav"></audio></div>
 </div></div></div></div></section><section class="bbbox">
 <h4 class="bbname">SGMSE+</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>2.2&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_pace_esm1.jpg" src="robot/video/sgmse_pace_esm1.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_rapid_esm1.jpg" src="robot/video/sgmse_rapid_esm1.mp4"
  data-se="7.89" data-rp="9.95" data-lat="2.06" data-cmp="1.83" data-clip="17.84" data-axis="19.99"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -444,7 +444,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_esm1.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sgmse_pace_esm1.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sgmse_rapid_esm1.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 30</span></span></div>
 <div class="ubody">
@@ -463,10 +463,10 @@
   <audio controls preload="none" src="robot/audio/enh_sgmse_orig_esm1.wav"></audio></div>
 </div></div></div></div></section></div></article><article class='uttrow'><p class='transcript'>Okay. I usually go to bed around 7.30 or so. I take my clothes and I get a bath and then I&hellip;</p><div class='bbgrid'><section class="bbbox">
 <h4 class="bbname">Schr&ouml;dinger bridge</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>3.6&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_pace_ews3.jpg" src="robot/video/sb_pace_ews3.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_rapid_ews3.jpg" src="robot/video/sb_rapid_ews3.mp4"
  data-se="14.63" data-rp="16.74" data-lat="2.11" data-cmp="1.61" data-clip="31.37" data-axis="36.49"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -478,7 +478,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_ews3.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sb_pace_ews3.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sb_rapid_ews3.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 50</span></span></div>
 <div class="ubody">
@@ -497,10 +497,10 @@
   <audio controls preload="none" src="robot/audio/enh_sb_orig_ews3.wav"></audio></div>
 </div></div></div></div></section><section class="bbbox">
 <h4 class="bbname">SGMSE+</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>2.3&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_pace_ews3.jpg" src="robot/video/sgmse_pace_ews3.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_rapid_ews3.jpg" src="robot/video/sgmse_rapid_ews3.mp4"
  data-se="14.63" data-rp="18.04" data-lat="3.41" data-cmp="2.97" data-clip="32.67" data-axis="36.49"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -512,7 +512,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_ews3.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sgmse_pace_ews3.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sgmse_rapid_ews3.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 30</span></span></div>
 <div class="ubody">
@@ -531,10 +531,10 @@
   <audio controls preload="none" src="robot/audio/enh_sgmse_orig_ews3.wav"></audio></div>
 </div></div></div></div></section></div></article><article class='uttrow'><p class='transcript'>I will not stay here. God, we simply must trust the character. Stay, stay, I will go mysel&hellip;</p><div class='bbgrid'><section class="bbbox">
 <h4 class="bbname">Schr&ouml;dinger bridge</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>3.6&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_pace_ews1.jpg" src="robot/video/sb_pace_ews1.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_rapid_ews1.jpg" src="robot/video/sb_rapid_ews1.mp4"
  data-se="18.21" data-rp="20.89" data-lat="2.68" data-cmp="1.93" data-clip="39.1" data-axis="45.34"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -546,7 +546,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_ews1.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sb_pace_ews1.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sb_rapid_ews1.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 50</span></span></div>
 <div class="ubody">
@@ -565,10 +565,10 @@
   <audio controls preload="none" src="robot/audio/enh_sb_orig_ews1.wav"></audio></div>
 </div></div></div></div></section><section class="bbbox">
 <h4 class="bbname">SGMSE+</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>2.3&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_pace_ews1.jpg" src="robot/video/sgmse_pace_ews1.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_rapid_ews1.jpg" src="robot/video/sgmse_rapid_ews1.mp4"
  data-se="18.21" data-rp="22.46" data-lat="4.25" data-cmp="3.60" data-clip="40.67" data-axis="45.34"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -580,7 +580,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_ews1.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sgmse_pace_ews1.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sgmse_rapid_ews1.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 30</span></span></div>
 <div class="ubody">
@@ -599,10 +599,10 @@
   <audio controls preload="none" src="robot/audio/enh_sgmse_orig_ews1.wav"></audio></div>
 </div></div></div></div></section></div></article><article class='uttrow'><p class='transcript'>I&#x27;m just sitting here looking at the sunset. This is the most peaceful place that I have b&hellip;</p><div class='bbgrid'><section class="bbbox">
 <h4 class="bbname">Schr&ouml;dinger bridge</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>3.6&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_pace_ews2.jpg" src="robot/video/sb_pace_ews2.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sb_rapid_ews2.jpg" src="robot/video/sb_rapid_ews2.mp4"
  data-se="19.96" data-rp="22.65" data-lat="2.69" data-cmp="2.12" data-clip="42.61" data-axis="49.77"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -614,7 +614,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_ews2.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sb_pace_ews2.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sb_rapid_ews2.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 50</span></span></div>
 <div class="ubody">
@@ -633,10 +633,10 @@
   <audio controls preload="none" src="robot/audio/enh_sb_orig_ews2.wav"></audio></div>
 </div></div></div></div></section><section class="bbbox">
 <h4 class="bbname">SGMSE+</h4>
-<div class="unitgrid"><div class="unit u-pace">
+<div class="unitgrid"><div class="unit u-rapid">
 <div class="uhead"><span class="ulabel">+RAPID</span><span class="chips"><span class='mchip spchip'><b>2.3&times; faster inference</b></span><span class="mchip"><b>NFE = 12</b></span></span></div>
 <div class="ubody">
-<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_pace_ews2.jpg" src="robot/video/sgmse_pace_ews2.mp4"
+<video class="rv" controls playsinline preload="none" poster="robot/poster/sgmse_rapid_ews2.jpg" src="robot/video/sgmse_rapid_ews2.mp4"
  data-se="19.96" data-rp="24.53" data-lat="4.57" data-cmp="3.95" data-clip="44.49" data-axis="49.77"></video>
 <div class="mods">
  <div class="mod mtimer">
@@ -648,7 +648,7 @@
  <div class="mod"><div class="mlab">What the robot heard</div>
   <audio controls preload="none" src="robot/audio/heard_ews2.wav"></audio></div>
  <div class="mod"><div class="mlab">Enhanced speech</div>
-  <audio controls preload="none" src="robot/audio/enh_sgmse_pace_ews2.wav"></audio></div>
+  <audio controls preload="none" src="robot/audio/enh_sgmse_rapid_ews2.wav"></audio></div>
 </div></div></div><div class="unit">
 <div class="uhead"><span class="ulabel">backbone default</span><span class="chips"><span class="mchip">NFE = 30</span></span></div>
 <div class="ubody">
